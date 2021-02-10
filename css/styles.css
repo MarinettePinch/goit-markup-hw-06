@@ -640,4 +640,8 @@ body {
   opacity: 0;
   pointer-events: none;
 }
+
+label {
+  display: block;
+}
 /*--modal window--*/

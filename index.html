@@ -514,16 +514,42 @@
             </li>
           </ul>
         </div>
+        <form action="" class="footer-form footer-social">
+          <h3 class="title-upp footer-title">Подпишитесь на рассылку</h3>
+          <label for=""><input type="email" name="" id="" /></label>
+          <a class="link main-section-link" href="#"
+            >Подписаться
+            <svg width="24" height="24">
+              <use href="./img/sprite.svg#send"></use>
+            </svg>
+          </a>
+        </form>
       </div>
     </footer>
     <!-- modal window-->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal flex">
-        <button class="button close-modal-btn" data-modal-close>
+        <button type="button" class="button close-modal-btn" data-modal-close>
           <svg width="11" height="11">
             <use href="./img/sprite.svg#form-close-btn"></use>
           </svg>
         </button>
+        <form action="#" class="modal-form">
+          <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
+          <label for=""> Имя <input type="text" /> </label>
+          <label for="">Телефон <input type="tel" name="" id="" /></label>
+          <label for="">Почта <input type="email" name="" id="" /></label>
+          <label for=""
+            >Комментарий <textarea name="" id="" cols="1" rows="6"></textarea>
+          </label>
+          <label for=""><input type="checkbox" name="" id="" /></label>
+          <span
+            >Соглашаюсь с рассылкой и принимаю<a href="#">
+              Условия договора</a
+            ></span
+          >
+          <button type="submit" class="send-data-btn">Отправить</button>
+        </form>
       </div>
     </div>
     <!--/modal window-->
