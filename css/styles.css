@@ -12,6 +12,7 @@
   --icons-color: rgba(175, 177, 184, 1);
   --icons-bg-footer-color: rgba(255, 255, 255, 0.1);
   --caption-bg-color: rgba(47, 48, 58, 0.8);
+  --transition-animation: 1250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 *,
@@ -46,9 +47,9 @@ body {
   text-transform: uppercase;
 }
 .container {
-  width: 1600px;
+  width: 1170px;
   margin: auto;
-  padding: 0 215px 94px;
+  padding-bottom: 94px;
 }
 
 .flex {
@@ -59,16 +60,17 @@ body {
 
 .header {
   border-bottom: 1px solid var(--border-color);
+  height: 80px;
+  padding: 24px 0;
 }
 
 .header-container {
-  width: 1600px;
+  width: 1170px;
   margin: auto;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  padding: 32px 215px;
 }
 
 .header-container,
@@ -104,14 +106,15 @@ body {
 
 .header-site-nav-items .link:hover::after,
 .header-site-nav-items .link:active::after,
-.header-site-nav-items .link:focus::after {
+.header-site-nav-items .link:focus::after,
+.current::after {
   content: "";
   display: inline-block;
   width: 100%;
   height: 4px;
   border-radius: 2px;
   background-color: var(--hover-text-color);
-  margin-top: 39px;
+  margin-top: 28px;
 }
 
 .header-address .link {
@@ -134,9 +137,7 @@ body {
 }
 
 .header .link {
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--transition-animation);
 }
 
 .header .link:hover,
@@ -175,8 +176,6 @@ body {
 }
 
 .main-section-title {
-  font-family: Roboto;
-  font-style: normal;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -325,9 +324,7 @@ body {
   border-radius: 50%;
   justify-content: center;
   align-items: center;
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--transition-animation);
 }
 
 .social-list:not(:last-child) {
@@ -335,9 +332,7 @@ body {
 }
 
 .social-list .link .icon {
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--transition-animation);
 }
 
 .social-list .link:hover .icon,
@@ -366,9 +361,7 @@ body {
   border-radius: 4px;
   justify-content: center;
   align-items: center;
-  transition-property: border;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border var(--transition-animation);
 }
 
 .customers-list:not(:last-child) {
@@ -376,9 +369,7 @@ body {
 }
 
 .customers-list .link .icon {
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--transition-animation);
 }
 
 .customers-list .link:hover .icon,
@@ -402,9 +393,9 @@ body {
 }
 
 .footer-container {
-  width: 1600px;
+  width: 1170px;
   margin: auto;
-  padding: 60px 215px;
+  padding: 60px 0;
 }
 
 .footer-address {
@@ -436,9 +427,7 @@ body {
 
 .footer .social-list .link {
   background-color: var(--icons-bg-footer-color);
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--transition-animation);
 }
 
 .footer .social-list .link:hover,
@@ -515,9 +504,9 @@ body {
   border-radius: 4px;
   padding: 6px 22px;
   margin-right: 8px;
-  transition-property: outline, background-color, color, box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: outline var(--transition-animation),
+    background-color var(--transition-animation),
+    color var(--transition-animation), box-shadowvar(--transition-animation);
 }
 
 .display-button:hover,
@@ -539,9 +528,8 @@ body {
   width: 370px;
   min-height: 404px;
   font-size: 0;
-  transition-property: outline, box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: outline var(--transition-animation),
+    box-shadow var(--transition-animation);
 }
 
 .projects-list:not(:nth-child(3n)) {
@@ -608,10 +596,7 @@ body {
   background-color: var(--hover-text-color);
   opacity: 0.9;
   transform: translatey(0%);
-  transition-property: transform;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-delay: 0;
+  transition: transform var(--transition-animation);
 }
 
 .projects-list .link:hover .overley,
@@ -638,7 +623,9 @@ body {
   left: 0;
   bottom: 0;
   right: 0;
+  opacity: 1;
   background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity var(--transition-animation);
 }
 .modal {
   position: relative;
@@ -671,9 +658,7 @@ body {
 }
 
 .close-modal-btn svg {
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--transition-animation);
 }
 
 .is-hidden {
@@ -702,7 +687,6 @@ body {
 
 .modal-label {
   display: block;
-
   font-weight: normal;
   font-size: 12px;
   line-height: 1.16x;
@@ -719,9 +703,7 @@ body {
   border-radius: 4px;
   margin-bottom: 10px;
   padding-left: 42px;
-  transition-property: border-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color var(--transition-animation);
   cursor: pointer;
 }
 
@@ -731,9 +713,7 @@ body {
   transform: translateX(-50%);
   bottom: 13px;
   color: var(--primary-text-color);
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--transition-animation);
 }
 .modal-icon {
   fill: currentColor;
@@ -760,9 +740,7 @@ body {
   opacity: 0.5;
   overflow: auto;
   resize: none;
-  transition-property: opacity;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity var(--transition-animation);
 }
 
 .modal-agreement {
@@ -776,6 +754,8 @@ body {
 }
 
 .modal-checkbox {
+  -moz-appearance: none;
+  -webkit-appearance: none;
   appearance: none;
   position: absolute;
 }
@@ -789,9 +769,7 @@ body {
   background-image: url(../img/checkbox.svg);
   background-repeat: no-repeat;
   background-size: contain;
-  transition-property: background-image;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-image var(--transition-animation);
 }
 
 .modal-checkbox:checked + .modal-agreement::before {
