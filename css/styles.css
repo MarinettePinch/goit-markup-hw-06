@@ -506,7 +506,7 @@ body {
   margin-right: 8px;
   transition: outline var(--transition-animation),
     background-color var(--transition-animation),
-    color var(--transition-animation), box-shadowvar(--transition-animation);
+    color var(--transition-animation), box-shadow var(--transition-animation);
 }
 
 .display-button:hover,
